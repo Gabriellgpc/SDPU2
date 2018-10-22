@@ -7,6 +7,10 @@ for p,_,files in os.walk('../etc/'):
     pass
 files.remove('ploter.py')
 
+
+if len(files) == 0:
+    print("Nao ha dados para visualizar... Faça a aquisição de dados primeiro.\n")
+    exit()
 for i in range(0,len(files)):
     print(i, '- ', files[i])
 index_file = int(input("index do arquivo para plotter?\t"))
